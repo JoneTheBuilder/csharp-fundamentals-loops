@@ -20,32 +20,55 @@ namespace csharp_fundamentals_loops.Main
         public void stepOne()
         {
             // TODO: 1. Write a for loop that adds the numbers 0 to 3 to the numsZeroToThree array                        
-            throw new NotImplementedException();            
+            for (int i = 0; i <= 3; i++)
+            {
+                numsZeroToThree.SetValue(i, i);
+            }            
         }
 
         public void stepTwo()
         {
             // TODO: 2. Write a for loop that adds the numbers 5 to 10 to the numsFiveToTen array
-            throw new NotImplementedException();
+            for (int i = 5; i <= 10; i++)
+            {
+                numsFiveToTen.SetValue(i, i-5);
+            }
         }
 
         public void stepThree()
         {
             // TODO: 3. Write a for loop that adds the numbers 3 to 0 (in that order) to the countdown array
-            throw new NotImplementedException();
-
+            for (int i = 3; i >= 0; i--)
+            {
+                int index = 3 - i;
+                countdown.SetValue(i, index);
+            }
         }
 
         public bool stepFour(int num)
         {
             // TODO: 6. Write a for loop that checks if num is in the favouriteNumbers array            
-            throw new NotImplementedException();
+            foreach (int i in favouriteNumbers)
+            {
+                if(i == num)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public bool stepFive(string hobby)
         {
             // TODO 5. Write a for loop that checks if the hobby String is in the myHobbies array
-            throw new NotImplementedException();
+            foreach (string i in myHobbies)
+            {
+                if (i == hobby)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 
